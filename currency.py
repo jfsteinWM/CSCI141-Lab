@@ -1,3 +1,5 @@
+import math
+
 US = float(1.00)
 EUR = float(US/1.08)
 GBP = float(US/1.21)
@@ -27,4 +29,4 @@ currencies = {
 amount_after_fee = dollar_amount * transaction_fee
 converted_amount = amount_after_fee * rates[convert]
 
-print("After fees you will receive", currencies[convert], int(converted_amount))
+print("After fees you will receive", currencies[convert], math.ceil(converted_amount))
