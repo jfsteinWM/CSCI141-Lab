@@ -27,4 +27,4 @@ currencies = {
 amount_after_fee = dollar_amount * transaction_fee
 converted_amount = amount_after_fee * rates[convert]
 
-print("After fees you will receive", converted_amount, currencies[convert], "in your chosen currency.")
+print("After fees you will receive", currencies[convert], converted_amount)
