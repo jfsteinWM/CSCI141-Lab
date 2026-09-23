@@ -29,4 +29,13 @@ currencies = {
 amount_after_fee = dollar_amount * transaction_fee
 converted_amount = amount_after_fee * rates[convert]
 
-print("After fees you will receive", currencies[convert], math.ceil(converted_amount))
+rounding = {
+    "1": math.ceil,
+    "2": math.floor,
+    "3": math.floor,
+    "4": math.floor
+}
+
+rounded_amount = rounding[convert](converted_amount)
+
+print("After fees you will receive", currencies[convert], rounded_amount)
